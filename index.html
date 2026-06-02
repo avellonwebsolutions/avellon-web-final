@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avellon Web Solutions - Website Usaha Sederhana</title>
+    <meta name="description" content="Layanan pembuatan landing page dan website sederhana untuk UMKM, toko, dan jasa lokal. Cepat, murah, dan langsung online.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brandDark: '#0a0a0a',
+                        brandCard: '#151515',
+                        brandGold: '#d4af37',
+                        brandGoldHover: '#b5952f'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Essential custom overrides for structural integrity */
+        body { 
+            background-color: theme('colors.brandDark');
+            /* Mekanik Utama: Gradient Overlay 92% - 98% + avellonlogo.jpg + Fixed Parallax */
+            background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.92), rgba(10, 10, 10, 0.98)), url('avellonlogo.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: #e5e5e5; 
+        }
+        .text-gradient { background: linear-gradient(90deg, #f9d976 0%, #d4af37 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="antialiased selection:bg-brandGold selection:text-brandDark">
+
+    <nav class="fixed w-full z-50 bg-brandDark/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <div class="flex-shrink-0 flex items-center gap-3">
+                <img src="avellonlogo.jpg" alt="Avellon Logo" class="h-10 w-10 object-cover rounded shadow-[0_0_10px_rgba(212,175,55,0.2)]">
+                <span class="font-bold text-xl tracking-wider text-white">AVELLON</span>
+            </div>
+            <div>
+                <a href="https://wa.me/+62895634049537" target="_blank" class="bg-brandGold hover:bg-brandGoldHover text-brandDark font-semibold py-2 px-5 rounded-full transition-colors text-sm">
+                    <i class="fa-brands fa-whatsapp mr-1"></i> Chat
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
+                Website Usaha Sederhana yang <span class="text-gradient">Cepat Online</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                Cocok untuk UMKM, toko, jasa lokal, dan bisnis kecil hingga menengah yang ingin punya halaman online simpel dengan tombol WhatsApp, Maps, dan sosial media.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="https://wa.me/+62895634049537" target="_blank" class="bg-brandGold hover:bg-brandGoldHover text-brandDark font-bold py-4 px-8 rounded flex items-center justify-center transition-transform hover:scale-105">
+                    <i class="fa-brands fa-whatsapp text-xl mr-2"></i> Chat WhatsApp Sekarang
+                </a>
+                <a href="#portfolio" class="bg-transparent border border-brandGold text-brandGold hover:bg-brandGold/10 font-bold py-4 px-8 rounded flex items-center justify-center transition-colors">
+                    Lihat Contoh Website
+                </a>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-medium text-gray-300">
+                <span class="bg-white/5 px-4 py-2 rounded-full border border-white/10 backdrop-blur-sm"><i class="fa-solid fa-bolt text-brandGold mr-2"></i>Pengerjaan cepat</span>
+                <span class="bg-white/5 px-4 py-2 rounded-full border border-white/10 backdrop-blur-sm"><i class="fa-solid fa-mobile-screen text-brandGold mr-2"></i>Mobile friendly</span>
+                <span class="bg-white/5 px-4 py-2 rounded-full border border-white/10 backdrop-blur-sm"><i class="fa-solid fa-check text-brandGold mr-2"></i>Tidak ribet</span>
+                <span class="bg-white/5 px-4 py-2 rounded-full border border-white/10 backdrop-blur-sm"><i class="fa-solid fa-globe text-brandGold mr-2"></i>Full online</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-20 bg-brandCard/90 backdrop-blur-sm border-y border-white/5">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Contoh Landing Page Website</h2>
+                <p class="text-gray-400">Tampilan sederhana, cepat diakses, dan mudah dibagikan ke pelanggan.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-brandDark rounded-xl overflow-hidden border border-white/10 shadow-lg group">
+                    <img src="portfolio/portfolio-1.jpg" alt="Portfolio 1" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/400x800/111/d4af37?text=Portfolio+1'">
+                </div>
+                <div class="bg-brandDark rounded-xl overflow-hidden border border-white/10 shadow-lg group">
+                    <img src="portfolio/portfolio-2.jpg" alt="Portfolio 2" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/400x800/111/d4af37?text=Portfolio+2'">
+                </div>
+                <div class="bg-brandDark rounded-xl overflow-hidden border border-white/10 shadow-lg group">
+                    <img src="portfolio/portfolio-3.jpg" alt="Portfolio 3" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/400x800/111/d4af37?text=Portfolio+3'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Apa yang Anda Dapatkan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-brandCard/90 backdrop-blur-sm p-6 rounded-lg border border-white/5"><i class="fa-brands fa-whatsapp text-3xl text-brandGold mb-4 block"></i><h3 class="font-bold text-white mb-2">Tombol WhatsApp</h3><p class="text-sm text-gray-400">Langsung chat ke nomor Anda tanpa pelanggan perlu menyimpan nomor.</p></div>
+                <div class="bg-brandCard/90 backdrop-blur-sm p-6 rounded-lg border border-white/5"><i class="fa-solid fa-link text-3xl text-brandGold mb-4 block"></i><h3 class="font-bold text-white mb-2">Link Sosmed</h3><p class="text-sm text-gray-400">Integrasi link Instagram & TikTok bisnis Anda di satu tempat.</p></div>
+                <div class="bg-brandCard/90 backdrop-blur-sm p-6 rounded-lg border border-white/5"><i class="fa-solid fa-map-location-dot text-3xl text-brandGold mb-4 block"></i><h3 class="font-bold text-white mb-2">Google Maps</h3><p class="text-sm text-gray-400">Embed peta lokasi usaha agar mudah ditemukan pelanggan.</p></div>
+                <div class="bg-brandCard/90 backdrop-blur-sm p-6 rounded-lg border border-white/5"><i class="fa-solid fa-mobile-button text-3xl text-brandGold mb-4 block"></i><h3 class="font-bold text-white mb-2">Responsive</h3><p class="text-sm text-gray-400">Tampilan sempurna di layar HP maupun Desktop PC.</p></div>
+                <div class="bg-brandCard/90 backdrop-blur-sm p-6 rounded-lg border border-white/5"><i class="fa-solid fa-server text-3xl text-brandGold mb-4 block"></i><h3 class="font-bold text-white mb-2">Online 24 Jam</h3><p class="text-sm text-gray-400">Website aktif tanpa henti, siap menerima kunjungan kapan saja.</p></div>
+                <div class="bg-brandCard/90 backdrop-blur-sm p-6 rounded-lg border border-white/5"><i class="fa-solid fa-share-nodes text-3xl text-brandGold mb-4 block"></i><h3 class="font-bold text-white mb-2">Mudah Dibagikan</h3><p class="text-sm text-gray-400">Satu link profesional untuk dibagikan ke semua pelanggan Anda.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brandCard/90 backdrop-blur-sm border-y border-white/5 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Proses Sederhana</h2>
+            <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-brandGold text-brandDark font-bold flex items-center justify-center shrink-0">1</div>
+                    <div><h4 class="text-lg font-bold text-white">Kirim Data</h4><p class="text-gray-400">Kirim nama usaha atau link Instagram bisnis Anda via WhatsApp.</p></div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-brandGold text-brandDark font-bold flex items-center justify-center shrink-0">2</div>
+                    <div><h4 class="text-lg font-bold text-white">Website Dibuat</h4><p class="text-gray-400">Kami memproses pembuatan landing page sesuai identitas bisnis.</p></div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-brandGold text-brandDark font-bold flex items-center justify-center shrink-0">3</div>
+                    <div><h4 class="text-lg font-bold text-white">Preview</h4><p class="text-gray-400">Link preview (contoh hasil) akan dikirimkan melalui chat untuk direview.</p></div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-brandGold text-brandDark font-bold flex items-center justify-center shrink-0">4</div>
+                    <div><h4 class="text-lg font-bold text-white">Live & Online</h4><p class="text-gray-400">Setelah disetujui, website langsung online dan siap digunakan.</p></div>
+                </div>
+            </div>
+            <div class="mt-10 p-4 bg-white/5 border-l-4 border-brandGold rounded backdrop-blur-sm">
+                <p class="text-sm text-gray-300"><i class="fa-solid fa-circle-info mr-2"></i><strong>Catatan:</strong> Seluruh proses dilakukan secara online agar lebih cepat, transparan, dan praktis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Pilihan Paket</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="bg-brandCard/90 backdrop-blur-sm p-8 rounded-xl border border-white/10 flex flex-col">
+                    <h3 class="text-2xl font-bold text-white mb-2">Paket Basic</h3>
+                    <div class="text-3xl font-bold text-brandGold mb-6">Rp350.000</div>
+                    <ul class="space-y-3 mb-8 flex-grow text-gray-300">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Landing page 1 halaman</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Tombol WhatsApp</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Instagram & TikTok</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Maps/alamat</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Responsive mobile</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>SSL aktif (HTTPS)</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Subdomain gratis</li>
+                    </ul>
+                    <p class="text-sm text-gray-400 mb-6 italic">Cocok untuk usaha kecil yang ingin cepat online.</p>
+                    <a href="https://wa.me/+62895634049537?text=Halo%20Avellon,%20saya%20tertarik%20dengan%20Paket%20Basic" target="_blank" class="block w-full text-center bg-white/10 hover:bg-white/20 text-white font-bold py-3 rounded transition-colors border border-white/20">Pilih Paket Basic</a>
+                </div>
+
+                <div class="bg-brandDark/90 backdrop-blur-sm p-8 rounded-xl border-2 border-brandGold flex flex-col relative shadow-[0_0_20px_rgba(212,175,55,0.15)]">
+                    <div class="absolute top-0 right-0 bg-brandGold text-brandDark text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">Rekomendasi</div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Paket Domain .com</h3>
+                    <div class="text-3xl font-bold text-brandGold mb-6">Rp750.000</div>
+                    <ul class="space-y-3 mb-8 flex-grow text-gray-300">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i><strong>Semua fitur paket Basic</strong></li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Domain .com (1 tahun)</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Setup DNS & Domain</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i>SSL Domain Premium</li>
+                    </ul>
+                    <p class="text-sm text-gray-400 mb-6 italic">Cocok untuk bisnis profesional. Domain dapat diperpanjang tiap tahun.</p>
+                    <a href="https://wa.me/+62895634049537?text=Halo%20Avellon,%20saya%20tertarik%20dengan%20Paket%20Domain%20.com" target="_blank" class="block w-full text-center bg-brandGold hover:bg-brandGoldHover text-brandDark font-bold py-3 rounded transition-colors">Pilih Paket Domain</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-brandCard/90 backdrop-blur-sm border-y border-white/5 px-4">
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4 border-b border-white/10 pb-2">Tidak Termasuk</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><i class="fa-solid fa-xmark text-red-500 mr-2"></i>Dashboard/admin panel</li>
+                    <li><i class="fa-solid fa-xmark text-red-500 mr-2"></i>Fasilitas edit sendiri (CMS)</li>
+                    <li><i class="fa-solid fa-xmark text-red-500 mr-2"></i>Redesign struktur halaman</li>
+                    <li><i class="fa-solid fa-xmark text-red-500 mr-2"></i>Fitur database/custom</li>
+                    <li><i class="fa-solid fa-xmark text-red-500 mr-2"></i>Maintenance artikel/rutin</li>
+                    <li><i class="fa-solid fa-xmark text-red-500 mr-2"></i>Layanan SEO Advance</li>
+                    <li><i class="fa-solid fa-xmark text-red-500 mr-2"></i>Integrasi Payment Gateway</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4 border-b border-white/10 pb-2">Perubahan Gratis (Revisi)</h3>
+                <ul class="space-y-2 text-gray-400 mb-6">
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Update Nomor WhatsApp</li>
+                    <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Update Link Sosial Media</li>
+                </ul>
+                <div class="p-3 bg-red-900/20 border border-red-500/20 rounded text-sm text-gray-300">
+                    Perubahan mekanis, desain, atau diluar poin di atas akan dikenakan biaya modifikasi tambahan sesuai tingkat kesulitan.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-white mb-10">FAQ (Pertanyaan Umum)</h2>
+            <div class="space-y-4">
+                
+                <div class="border border-white/10 bg-brandCard/90 backdrop-blur-sm rounded">
+                    <button class="w-full text-left px-6 py-4 font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        Bagaimana sistem pembayarannya?
+                        <i class="fa-solid fa-chevron-down text-brandGold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 text-sm">
+                        <div class="pb-4">Pembayaran dilakukan di awal sebelum proses pembuatan website dimulai minimal 50% (DP).</div>
+                    </div>
+                </div>
+
+                <div class="border border-white/10 bg-brandCard/90 backdrop-blur-sm rounded">
+                    <button class="w-full text-left px-6 py-4 font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        Apakah bisa bayar setelah website selesai?
+                        <i class="fa-solid fa-chevron-down text-brandGold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 text-sm">
+                        <div class="pb-4">50% dibayar sebelum pembuatan, dan 50% sisanya wajib dilunasi setelah proses deploy selesai.</div>
+                    </div>
+                </div>
+
+                <div class="border border-white/10 bg-brandCard/90 backdrop-blur-sm rounded">
+                    <button class="w-full text-left px-6 py-4 font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        Berapa lama pengerjaannya?
+                        <i class="fa-solid fa-chevron-down text-brandGold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 text-sm">
+                        <div class="pb-4">Estimasi sekitar 1 hari kerja setelah seluruh informasi bisnis kami terima dengan lengkap.</div>
+                    </div>
+                </div>
+
+                <div class="border border-white/10 bg-brandCard/90 backdrop-blur-sm rounded">
+                    <button class="w-full text-left px-6 py-4 font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        Apakah saya perlu menyiapkan desain atau teks?
+                        <i class="fa-solid fa-chevron-down text-brandGold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 text-sm">
+                        <div class="pb-4">Tidak wajib. Informasi dasar bisnis bisa ditarik dari Instagram, Google Maps, atau materi yang sudah Anda punya online.</div>
+                    </div>
+                </div>
+
+                <div class="border border-white/10 bg-brandCard/90 backdrop-blur-sm rounded">
+                    <button class="w-full text-left px-6 py-4 font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        Apakah bisa revisi?
+                        <i class="fa-solid fa-chevron-down text-brandGold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 text-sm">
+                        <div class="pb-4">Perubahan teks ringan (nomor WA, alamat, link) dibantu gratis. Perubahan struktur desain tidak termasuk layanan.</div>
+                    </div>
+                </div>
+
+                <div class="border border-white/10 bg-brandCard/90 backdrop-blur-sm rounded">
+                    <button class="w-full text-left px-6 py-4 font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        Apakah menerima meeting, Zoom, atau telepon?
+                        <i class="fa-solid fa-chevron-down text-brandGold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 text-sm">
+                        <div class="pb-4">Demi efisiensi waktu, seluruh operasional di-handle via Chat (WhatsApp). Ini mencegah miskomunikasi dan memastikan histori permintaan terstruktur.</div>
+                    </div>
+                </div>
+
+                <div class="border border-white/10 bg-brandCard/90 backdrop-blur-sm rounded">
+                    <button class="w-full text-left px-6 py-4 font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        Apakah bisa datang langsung ke lokasi?
+                        <i class="fa-solid fa-chevron-down text-brandGold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 text-sm">
+                        <div class="pb-4">Tidak. Ini adalah layanan digital yang dikelola sepenuhnya 100% online.</div>
+                    </div>
+                </div>
+
+                <div class="border border-white/10 bg-brandCard/90 backdrop-blur-sm rounded">
+                    <button class="w-full text-left px-6 py-4 font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        Lokasi bisnis berada di mana?
+                        <i class="fa-solid fa-chevron-down text-brandGold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 text-sm">
+                        <div class="pb-4">Avellon Web Solutions beroperasi secara remote (terpusat manajemennya) dan siap melayani klien di seluruh Indonesia.</div>
+                    </div>
+                </div>
+
+                <div class="border border-white/10 bg-brandCard/90 backdrop-blur-sm rounded">
+                    <button class="w-full text-left px-6 py-4 font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        Apakah website bisa menggunakan domain sendiri?
+                        <i class="fa-solid fa-chevron-down text-brandGold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 text-sm">
+                        <div class="pb-4">Ya. Anda bisa memilih Paket Domain .com (Rp750.000) untuk menggunakan alamat kustom.</div>
+                    </div>
+                </div>
+
+                <div class="border border-white/10 bg-brandCard/90 backdrop-blur-sm rounded">
+                    <button class="w-full text-left px-6 py-4 font-semibold text-white flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        Apakah website bisa diedit sendiri?
+                        <i class="fa-solid fa-chevron-down text-brandGold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 text-sm">
+                        <div class="pb-4">Tidak. Website yang kami sediakan adalah file statis murni tanpa CMS (Dashboard Admin). Alasannya: performa jauh lebih kencang, anti-hack (karena tidak ada database), dan cost lebih murah.</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brandGold/90 backdrop-blur-md text-brandDark px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-bold mb-4 text-brandDark">Buat Bisnis Anda Lebih Mudah Ditemukan Online</h2>
+            <p class="text-lg mb-8 font-medium opacity-90 text-brandDark">Cocok untuk usaha lokal yang ingin punya halaman online sederhana tanpa proses ribet.</p>
+            <a href="https://wa.me/+62895634049537" target="_blank" class="inline-flex items-center bg-brandDark hover:bg-black text-brandGold font-bold py-4 px-10 rounded shadow-2xl transition-transform hover:-translate-y-1">
+                <i class="fa-brands fa-whatsapp text-xl mr-2"></i> Chat WhatsApp Sekarang
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-black/90 backdrop-blur-sm pt-16 pb-8 px-4 border-t border-white/5">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center border-b border-white/10 pb-10 mb-8 gap-8">
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="avellonlogo.jpg" alt="Avellon Logo" class="h-8 w-8 object-cover rounded opacity-80">
+                    <span class="font-bold text-xl tracking-widest text-white">AVELLON</span>
+                </div>
+                <p class="text-gray-500 text-sm max-w-xs">Layanan landing page bisnis sederhana yang dijalankan secara online untuk UMKM dan usaha lokal.</p>
+            </div>
+            
+            <div class="flex gap-4">
+                <a href="https://wa.me/+62895634049537" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-brandGold hover:text-brandDark transition-colors">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/avellon.id/" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-brandGold hover:text-brandDark transition-colors">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@avellon.id/" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-brandGold hover:text-brandDark transition-colors">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="mailto:halo@avellon.id" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-brandGold hover:text-brandDark transition-colors">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+                <a href="https://linktr.ee/avellon.management" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-brandGold hover:text-brandDark transition-colors">
+                    <i class="fa-solid fa-link"></i>
+                </a>
+            </div>
+        </div>
+        <div class="text-center text-xs text-gray-600">
+            &copy; 2026 Avellon Web Solutions. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            // Toggle Logic
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                // Close all others first
+                document.querySelectorAll('.faq-answer').forEach(el => el.style.maxHeight = null);
+                document.querySelectorAll('.fa-chevron-down').forEach(el => el.style.transform = 'rotate(0deg)');
+                
+                // Open clicked
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+</body>
+</html>
